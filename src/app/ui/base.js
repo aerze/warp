@@ -99,36 +99,6 @@ define(['central'], function (central){
                     hidden: true
                 },
                 {
-                    type: 'Button',
-                    ref: 'btnExamplesStart',
-                    disabled: false,
-                    params: {
-                        className: 'btnExamplesStart',
-                        label: 'Examples',
-                        tooltip: 'Start serving the Examples folder to browsers'
-                    },
-                    on: {
-                        click: function (){
-                            central.examplesStart();
-                        }
-                    }
-                },
-                {
-                    type: 'Button',
-                    ref: 'btnExamplesStop',
-                    params: {
-                        className: 'btnExamplesStop',
-                        label: 'Examples Stop',
-                        tooltip: 'Stop serving the Examples folder'
-                    },
-                    on: {
-                        click: function (){
-                            central.examplesStop();
-                        }
-                    },
-                    hidden: true
-                },
-                {
                     type: 'Label',
                     ref: 'lblStatus',
                     params: {
@@ -228,17 +198,6 @@ define(['central'], function (central){
         ui.btnHistory.show();
         ui.btnStart.show();
     });
-
-    central.on('examplesStart', function () {
-        ui.btnExamplesStart.hide();
-        ui.btnExamplesStop.show();
-    });
-
-    central.on('examplesStop', function () {
-        ui.btnExamplesStop.hide();
-        ui.btnExamplesStart.show();
-    });
-
 
     return ui;
 });
