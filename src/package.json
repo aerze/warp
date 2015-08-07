@@ -2,7 +2,7 @@
     "name": "Warp",
     "main": "index.html",
     "description": "A lightweight HTTP server and assisting app for HTML5 game development with Phaser.",
-    "version": "1.0.0",
+    "version": "1",
 
     "window": {
         "title": "Warp",
@@ -16,9 +16,5 @@
         "min_height": 400,
         "max_width": 600,
         "max_height": 400
-    },
-    "dependencies": {
-        "connect": "*"
     }
-
 }
