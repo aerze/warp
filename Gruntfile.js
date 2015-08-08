@@ -2,32 +2,24 @@ module.exports = function (grunt){
     'use strict';
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-nw-builder');
 
     grunt.initConfig({
-        compress: {
-            main: {
-                options: {
-                    archive: './dist/app.nw',
-                    mode: 'zip'
-                },
-                files: [
-                    {
-                        cwd: './src/',
-                        expand: true,
-                        src: '**'
-                    }
-                ]
-            }
+        nwjs: {
+            options: {
+                platforms: ['win'],
+                buildDir: './builds'
+            },
+            src: ['./praw/**/*']
         },
 
         watch: {
             main: {
-                files: ['./src/**'],
-                tasks: ['compress']
+                files: ['./praw/**'],
+                tasks: ['nwjs']
             }
         }
     });
 
-    grunt.registerTask('default', 'compress');
+    grunt.registerTask('default', 'nwjs');
 };

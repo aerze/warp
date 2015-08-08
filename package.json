@@ -1,0 +1,30 @@
+{
+  "name": "praw",
+  "version": "0.1.0",
+  "description": "A lightweight HTTP server and assisting app for HTML5 game development with Phaser.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerze/warp.git"
+  },
+  "keywords": [
+    "Phaser",
+    "Warp",
+    "HTML5",
+    "games"
+  ],
+  "author": "Gus Suarez <@mythrilco>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aerze/warp/issues"
+  },
+  "homepage": "https://github.com/aerze/warp#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nw-builder": "^2.0.0"
+  }
+}
