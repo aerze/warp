@@ -50,7 +50,7 @@ define([], function (){
 
             server.on('listening', function (){
                 central.trigger('start');
-
+                warp.log('Server running on port 9227');
                 gui.Shell.openExternal('http://localhost:9277/');
             });
         }

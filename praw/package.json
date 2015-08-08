@@ -1,15 +1,23 @@
 {
-	"name": "parW",
-	"main": "index.html",
-	"description": "A lightweight HTTP server and assisting app for HTML5 game development with Phaser.",
-	"version": "0.1.0",
-
-	"window": {
-		"title": "parW",
-		"toolbar": false,
-		"frame": true,
-		"width": 600,
-		"height": 400,
-		"position": "mouse"
-	}
+  "name": "parW",
+  "main": "index.html",
+  "description": "A lightweight HTTP server and assisting app for HTML5 game development with Phaser.",
+  "version": "0.1.0",
+  "window": {
+    "title": "parW",
+    "toolbar": false,
+    "frame": false,
+    "width": 600,
+    "height": 400,
+    "position": "center",
+    "min_width": 600,
+    "min_height": 400,
+    "max_width": 600,
+    "max_height": 400,
+    "resizable": false
+  },
+  "dependencies": {
+    "connect": "^3.4.0",
+    "serve-static": "^1.10.0"
+  }
 }
