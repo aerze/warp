@@ -7,7 +7,7 @@ module.exports = function (grunt){
     grunt.initConfig({
         nwjs: {
             options: {
-                platforms: ['win'],
+                platforms: ['win', 'linux'],
                 buildDir: './builds'
             },
             src: ['./praw/**/*']
