@@ -8,7 +8,7 @@ var connect = require('connect'),
 
 warp.cache = {};
 warp.get = function (key) { return this.cache[key]; };
-warp.set = function (key, value) { 
+warp.set = function (key, value) {
     if (!this.cache) { this.cache = {}; }
     if (!this.events) { this.events = {}; }
     this.events[key] = new Event(key);
@@ -91,7 +91,13 @@ warp.stop = function () {
 };
 
 warp.historyMenu = new gui.Menu();
-warp.historyItems = JSON.parse(localStorage.history);
+warp.historyItems = [];
+try {
+    warp.historyItems = JSON.parse(localStorage.history);
+} catch (e) {
+    console.dir(e);
+    warp.historyItems = [];
+}
 console.log(warp.historyItems);
 if (!warp.historyItems) warp.historyItems = [];
 
